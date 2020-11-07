@@ -1,10 +1,22 @@
 import React from 'react'
 
-import mapStyles from '../styles/Map.module.sass'
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
-const Map = () => {
+// import mapStyles from '../styles/Map.module.sass'
+
+const Map = ({ coordinates: { lat, lng } }) => {
   return (
-    <h1>This is map</h1>
+    <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+      <TileLayer
+        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      <Marker position={[lat, lng]}>
+        <Popup>
+          A pretty CSS3 popup. <br /> Easily customizable.
+        </Popup>
+      </Marker>
+    </MapContainer>
   )
 }
 

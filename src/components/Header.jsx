@@ -1,10 +1,15 @@
 import React from 'react'
 
+import SearchBar from './SearchBar'
+
 import headerStyles from '../styles/Header.module.sass'
 
-const Header = () => {
+const Header = ({ handleSearch }) => {
   return (
-    <h1>This is header</h1>
+    <header>
+      <h1>IP Address Tracker</h1>
+      <SearchBar handleSearch={handleSearch}/>
+    </header>
   )
 }
 
