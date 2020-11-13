@@ -5,8 +5,8 @@ import infoStyles from '../styles/Info.module.sass'
 const InfoItem = ({ name, value}) => {
   return (
     <div>
-      <span>{name}</span>  
-      <h2>{value}</h2>  
+      <span className={infoStyles.name} >{name}</span>  
+      <h2 className={infoStyles.value} >{value}</h2>  
     </div>  
   )
 }

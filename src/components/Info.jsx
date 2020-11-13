@@ -1,11 +1,11 @@
 import React from 'react'
 
 import InfoItem from './InfoItem'
-// import infoStyles from '../styles/Info.module.sass'
+import infoStyles from '../styles/Info.module.sass'
 
 const Info = ({ info: { ip, location, timezone, isp }}) => {
   return (
-    <ul>
+    <ul className={infoStyles.infoBlock} >
       <li>
         <InfoItem name="IP Address" value={ip}/>
       </li>
