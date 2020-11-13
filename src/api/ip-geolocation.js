@@ -15,8 +15,8 @@ export const fetchIPGeoData = async (address) => {
         isp: 'google.com'
       },
       coordinates: {
-        lat: 54.687157,
-        lng: 25.279652
+        lat: 51.5074,
+        lng: 0.1278
       }
     }
 

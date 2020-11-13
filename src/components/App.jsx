@@ -17,14 +17,13 @@ class App extends React.Component {
       isp: 'Amazon'
     },
     coordinates: {
-      lat: 0,
-      lng: 0
+      lat: 54.6872,
+      lng: 25.2797
     }
   }
 
   handleSearch = async (address) => {
     const fetchedData = await fetchIPGeoData(address)
-
     this.setState(fetchedData)
   }
 

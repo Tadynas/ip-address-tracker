@@ -1,20 +1,28 @@
 import React from 'react'
 
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, TileLayer, MapConsumer } from "react-leaflet";
+import L from 'leaflet';
+
+import markerIcon from '../utils/markerIcon'
 
 import mapStyles from '../styles/Map.module.sass'
 
-const Map = ({ coordinates: { lat, lng } }) => {
+const Map = ({ coordinates: { lat, lng } }) => {  
+  const position = [lat, lng]
+
   return (
-    <MapContainer className={mapStyles.container} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+    <MapContainer className={mapStyles.map} center={position} zoom={13} scrollWheelZoom={true}>
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        url="https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png"
       />
-      <Marker position={[lat, lng]}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
+      <MapConsumer>
+        {(map) => {
+          map.setView([lat, lng], 15)
+          return null  
+        }}
+      </MapConsumer>
+      <Marker position={position} icon={markerIcon}>
       </Marker>
     </MapContainer>
   )
