@@ -17,8 +17,8 @@ class App extends React.Component {
       isp: '---'
     },
     coordinates: {
-      lat: 54.6872,
-      lng: 25.2797
+      lat: 51.509865,
+      lng: -0.118092
     }
   }
 

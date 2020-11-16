@@ -13,7 +13,7 @@ const Map = ({ coordinates: { lat, lng } }) => {
     <MapContainer className={mapStyles.map} center={position} scrollWheelZoom={true} zoomControl={false}>
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        url="https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png"
+        url={process.env.REACT_APP_LEAFLET_PROVIDERS_URL}
       />
       <MapConsumer>
         {(map) => {
