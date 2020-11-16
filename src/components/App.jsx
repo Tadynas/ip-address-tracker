@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { fetchUserIP, fetchIPGeoData } from '../api/ip-geolocation'
+import { fetchIPGeoData } from '../api/ip-geolocation'
 
 import Header from './Header'
 import Info from './Info'
