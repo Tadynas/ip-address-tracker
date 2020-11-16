@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { fetchIPGeoData } from '../api/ip-geolocation'
+import { fetchUserIP, fetchIPGeoData } from '../api/ip-geolocation'
 
 import Header from './Header'
 import Info from './Info'
@@ -22,13 +22,13 @@ class App extends React.Component {
     }
   }
 
-  // async componentDidMount() {
-  //   const fetchedData = await fetchUserIP()
-  //   if(fetchedData) {
-  //     const userIP = fetchedData.data
-  //     this.handleSearch(userIP)
-  //   }
-  // }
+  async componentDidMount() {
+    const fetchedData = await fetchUserIP()
+    if(fetchedData) {
+      const userIP = fetchedData.data
+      this.handleSearch(userIP)
+    }
+  }
 
   handleSearch = async (address) => {
     const fetchedData = await fetchIPGeoData(address)
