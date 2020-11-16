@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { MapContainer, Marker, TileLayer, MapConsumer } from "react-leaflet";
-import L from 'leaflet';
+import { MapContainer, Marker, TileLayer, MapConsumer, ZoomControl } from "react-leaflet";
 
 import markerIcon from '../utils/markerIcon'
 
@@ -11,7 +10,7 @@ const Map = ({ coordinates: { lat, lng } }) => {
   const position = [lat, lng]
 
   return (
-    <MapContainer className={mapStyles.map} center={position} zoom={13} scrollWheelZoom={true}>
+    <MapContainer className={mapStyles.map} center={position} scrollWheelZoom={true} zoomControl={false}>
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png"
@@ -24,6 +23,7 @@ const Map = ({ coordinates: { lat, lng } }) => {
       </MapConsumer>
       <Marker position={position} icon={markerIcon}>
       </Marker>
+      <ZoomControl position="bottomright" />
     </MapContainer>
   )
 }

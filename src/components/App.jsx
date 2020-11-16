@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { fetchIPGeoData } from '../api/ip-geolocation'
+import { fetchUserIP, fetchIPGeoData } from '../api/ip-geolocation'
 
 import Header from './Header'
 import Info from './Info'
@@ -11,14 +11,22 @@ import appStyles from '../styles/App.module.sass'
 class App extends React.Component {
   state = {
     info: {
-      ip: '8.8.8.8',
-      location: 'Vilnius, Lietuva, 123456',
-      timezone: '02:00',
-      isp: 'Amazon'
+      ip: '---',
+      location: '---',
+      timezone: '---',
+      isp: '---'
     },
     coordinates: {
       lat: 54.6872,
       lng: 25.2797
+    }
+  }
+
+  async componentDidMount() {
+    const fetchedData = await fetchUserIP()
+    if(fetchedData) {
+      const userIP = fetchedData.data
+      this.handleSearch(userIP)
     }
   }
 
@@ -31,7 +39,7 @@ class App extends React.Component {
     const { info, coordinates } = this.state
 
     return (
-      <div>
+      <div className={appStyles.container}>
         <Header handleSearch={this.handleSearch}/>
         <Info info={info}/>
         <Map coordinates={coordinates}/>

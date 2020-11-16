@@ -18,7 +18,7 @@ const SearchBar = (props) => {
 
   return (
     <form onSubmit={handleSearch}>
-      {error && <p>Enter valid IP address or domain!</p>}
+      {error && <p className={searchBarStyles.error} >Enter valid IP address or domain!</p>}
       <div className={searchBarStyles.formInput}>
         <input 
           type="text"

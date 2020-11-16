@@ -2,6 +2,12 @@
 
 form
   margin-top: 20px
+  position: relative
+  display: inline-block
+
+  @media screen and ( max-width: 768px )
+    width: 100%
+
   input
     font-family: $rubik-font
     padding: 17px 60px 17px 10px
@@ -12,6 +18,10 @@ form
     width: 500px
     &::placeholder
       color: $grey
+
+    @media screen and ( max-width: 768px )
+      width: 100%
+
   button
     background-color: black
     background-image: url('../images/icon-arrow.svg')
@@ -29,3 +39,12 @@ form
 .formInput
   position: relative
   display: inline-block
+
+  @media screen and ( max-width: 768px )
+    width: 100%
+
+.error
+  position: absolute
+  bottom: 0
+  transform: translateY(130%)
+  color: white
