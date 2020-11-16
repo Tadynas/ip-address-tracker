@@ -4,6 +4,7 @@ import { MapContainer, Marker, TileLayer, MapConsumer, ZoomControl } from "react
 
 import markerIcon from '../utils/markerIcon'
 
+import 'leaflet/dist/leaflet.css';
 import mapStyles from '../styles/Map.module.sass'
 
 const Map = ({ coordinates: { lat, lng } }) => {  
