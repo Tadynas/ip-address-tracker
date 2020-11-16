@@ -6,7 +6,7 @@ import headerStyles from '../styles/Header.module.sass'
 
 const Header = ({ handleSearch }) => {
   return (
-    <header>
+    <header className={headerStyles.header}>
       <div>
         <h1>IP Address Tracker</h1>
         <SearchBar handleSearch={handleSearch}/>
