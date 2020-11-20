@@ -70,7 +70,7 @@ You will also see any lint errors in the console.
 
 Ipify requires additional API KEY:
 1. Create [ipify](https://geo.ipify.org) account
-2. Create your personal ipify (API KEY)[https://geo.ipify.org/statistics]
+2. Create your personal ipify [API KEY](https://geo.ipify.org/statistics)
 3. Create .env file in project root directory
 4. Add following line of code
 ```
