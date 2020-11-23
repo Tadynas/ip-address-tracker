@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+## IP Address Tracker [(Live Version)](https://agitated-panini-ec0fd6.netlify.app)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React.js project that tracks location of user provided IP address.
 
-## Available Scripts
+![IP Address Tracker](https://i.imgur.com/FDTaDy4.png)
 
-In the project directory, you can run:
 
-### `yarn start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Following section will provide steps on how to setup the project locally
 
-The page will reload if you make edits.\
+### Prerequisites
+
+To run this project you need to have node.js
+
+```sh
+npm install npm@latest -g
+```
+
+### Installation
+
+1. Clone the repo
+
+```sh
+git clone https://github.com/Tadynas/ip-address-tracker.git
+```
+
+2. Navigate to project directory
+
+```sh
+cd ip-address-tracker
+```
+
+3. Install dependencies
+
+```sh
+yarn install
+```
+
+4.  Start project
+
+```sh
+yarn start
+```
+
+It will run the app in the development mode.
+Open [http://localhost:3000](http://localhost:3000/) to view it in the browser.
+
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-### `yarn test`
+## Tools
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. React.js
+2. Leaflet.js
+3. Axios
+4. Chart.js
+5. Moment.js
+6. SASS
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. [Fetching User IP](https://api.ipify.org)
 
-### `yarn eject`
+2. [Fetching IP Geo Information](https://geo.ipify.org)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Keys
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Ipify requires additional API KEY:
+1. Create [ipify](https://geo.ipify.org) account
+2. Create your personal ipify [API KEY](https://geo.ipify.org/statistics)
+3. Create .env file in project root directory
+4. Add following line of code
+```
+REACT_APP_IPIFY_KEY=PERSONAL_API_KEY
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
