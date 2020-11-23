@@ -3,7 +3,6 @@ import React from 'react'
 import { fetchUserIP, fetchIPGeoData } from '../api/ip-geolocation'
 
 import Header from './Header'
-import Info from './Info'
 import Map from './Map'
 
 import appStyles from '../styles/App.module.sass'
@@ -40,8 +39,7 @@ class App extends React.Component {
 
     return (
       <div className={appStyles.container}>
-        <Header handleSearch={this.handleSearch}/>
-        <Info info={info}/>
+        <Header handleSearch={this.handleSearch} info={info}/>
         <Map coordinates={coordinates}/>
       </div>
     )
