@@ -77,4 +77,4 @@ Ipify requires additional API KEY:
 REACT_APP_IPIFY_KEY=PERSONAL_API_KEY
 ```
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and deployed to [Netlify](https://app.netlify.com)
