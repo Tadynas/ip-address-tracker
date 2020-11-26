@@ -54,8 +54,6 @@ You will also see any lint errors in the console.
 1. React.js
 2. Leaflet.js
 3. Axios
-4. Chart.js
-5. Moment.js
 6. SASS
 
 
